@@ -68,18 +68,18 @@ onMounted(() => {
     class="relative dropdown p-4 transition-all duration-600 ease-out"
     :class="show ? 'bg-blue-100' : 'bg-green-100'"
   >
-    <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="show = !show">Click me to flip!</strong>
-    <p class="h-50 w-50 m-auto bg-blue-200" v-if="show">
+    <strong class="flex-center border border-solid border-blue-300 rounded-lg mb-2 px-3 py-2" @click="show = !show">Click me to flip!</strong>
+    <p class="flex-center h-50 m-auto bg-blue-200 rounded-lg" v-if="show">
       {{ show && 'Lorum ipsum...' }}
     </p>
-    <p class="h-50 w-50 m-auto bg-green-200" v-else>
+    <p class="flex-center h-50 m-auto bg-green-200 rounded-lg" v-else>
       {{ !show && 'Fazi...' }}
     </p>
   </div>
 
   <div class="p-3 bg-gray-300 h-xl w-full transition duration-400 ease-out" :class="slide ? 'translate-y-50' : 'translate-y-0'">
     <div ref="slider">
-      <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="slide = !slide"
+      <strong class="flex-center rounded-lg border border-solid border-blue-300 px-3 py-2" @click="slide = !slide"
         >Click me to slide!</strong
       >
       <button v-if="!slide" class="mt-100px w-full h-12 flex-center bg-white rounded-lg">Submit</button>
