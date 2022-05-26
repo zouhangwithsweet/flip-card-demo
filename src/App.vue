@@ -6,7 +6,7 @@ const dropdown = ref() // we need a DOM node
 const show = ref(false)
 
 const slider = ref()
-const slide = ref(false)
+const slide = ref(true)
 
 onMounted(() => {
   autoAnimate(slider.value)
