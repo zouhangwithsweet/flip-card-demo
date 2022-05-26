@@ -57,7 +57,7 @@ onMounted(() => {
     }
     // return our KeyframeEffect() and pass
     // it the chosen keyframes.
-    return new KeyframeEffect(el, keyframes, { duration: 600, easing: 'ease-out' })
+    return new KeyframeEffect(el, keyframes, { duration: 500, easing: 'ease-out' })
   })
 })
 </script>
@@ -68,7 +68,7 @@ onMounted(() => {
     class="relative dropdown p-4 transition-all duration-600 ease-out"
     :class="show ? 'bg-blue-100' : 'bg-green-100'"
   >
-    <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="show = !show">Click me to open!</strong>
+    <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="show = !show">Click me to flip!</strong>
     <p class="h-50 w-50 m-auto bg-blue-200" v-if="show">
       {{ show && 'Lorum ipsum...' }}
     </p>
@@ -77,14 +77,12 @@ onMounted(() => {
     </p>
   </div>
 
-  <div
-    ref="slider"
-    class="p-3 bg-gray-300 h-xl absolute w-full"
-    :class="slide ? 'translate-y-10' : 'translate-y-0'"
-  >
-    <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="slide = !slide"
-      >Click me to open!</strong
-    >
-    <button v-if="!slide" class="mt-100px w-full h-12 flex-center bg-white rounded-lg">Submit</button>
+  <div class="p-3 bg-gray-300 h-xl w-full transition duration-400 ease-out" :class="slide ? 'translate-y-50' : 'translate-y-0'">
+    <div ref="slider">
+      <strong class="flex border border-solid border-blue-300 px-3 py-2" @click="slide = !slide"
+        >Click me to slide!</strong
+      >
+      <button v-if="!slide" class="mt-100px w-full h-12 flex-center bg-white rounded-lg">Submit</button>
+    </div>
   </div>
 </template>
