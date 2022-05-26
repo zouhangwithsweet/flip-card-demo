@@ -82,7 +82,9 @@ onMounted(() => {
       <strong class="flex-center rounded-lg border border-solid border-blue-300 px-3 py-2" @click="slide = !slide"
         >Click me to slide!</strong
       >
-      <button v-if="!slide" class="mt-100px w-full h-12 flex-center bg-white rounded-lg">Submit</button>
+
+      <input v-if="!slide" placeholder="please input" class="mt-100px mb-2 px-3 block h-12 w-full rounded-lg" />
+      <button v-if="!slide" class=" w-full h-12 flex-center bg-white rounded-lg">Submit</button>
     </div>
   </div>
 </template>
